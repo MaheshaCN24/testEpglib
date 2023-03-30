@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020, Egeniq
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/programguide_constraint_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191919"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:id="@+id/program_date"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="75.5dp"
+        android:layout_marginLeft="85dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="#FFFFFFDE"
+            android:text="Today"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_date_time"
+            android:layout_gravity="start|center_vertical"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#FFFFFF99"
+            android:text="DD-mm-YYYY | HH:MM AM"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/all_channel_button"
+        style="@style/ProgramGuide.Filter.Button"
+        android:text="ALL CHANNELS"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/program_date"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/gec_button"
+        style="@style/ProgramGuide.Filter.Button"
+        android:text="GEC"
+        android:layout_marginTop="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@id/all_channel_button"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/movies_button"
+        style="@style/ProgramGuide.Filter.Button"
+        android:text="MOVIES"
+        android:layout_marginTop="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@id/gec_button"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="53dp"
+        android:src="@mipmap/ic_logo"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#191919"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="259dp">
+
+        <View
+            android:layout_width="58dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="#242424"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="Overdraw"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="259dp">
+
+        <Space
+            android:id="@+id/programguide_menu_visible_margin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/programguide_page_top_margin_menu_visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:id="@+id/programguide_timeline_row_negative_margin"
+            android:layout_width="@dimen/programguide_time_row_negative_margin"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/programguide_top_margin" />
+
+        <Space
+            android:id="@+id/programguide_current_time_indicator_top_offset"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/programguide_current_time_indicator_top_height"
+            app:layout_constraintBottom_toTopOf="@id/background"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        <View
+            android:id="@+id/programguide_top_margin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/programguide_time_row" />
+
+        <View
+            android:id="@+id/focus_catcher"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ViewAnimator
+            android:id="@+id/programguide_content_animator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out"
+            app:layout_constraintBottom_toBottomOf="@id/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/background"
+            app:layout_constraintVertical_bias="0.0">
+
+            <!-- Loading state -->
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+
+            <!-- Error state -->
+            <TextView
+                android:id="@+id/programguide_error_message"
+                style="@style/ProgramGuide.ErrorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/programguide_error_fetching_content" />
+
+            <!-- Data state -->
+            <com.egeniq.androidtvprogramguide.ProgramGuideGridView
+                android:id="@+id/programguide_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </ViewAnimator>
+
+        <Space
+            android:id="@+id/left_channel_guideline"
+            android:layout_width="@dimen/programguide_channel_column_width"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.egeniq.androidtvprogramguide.timeline.ProgramGuideTimelineRow
+            android:id="@+id/programguide_time_row"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/programguide_time_row_height"
+            android:alpha="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/programguide_current_date"
+            app:layout_constraintTop_toTopOf="@id/programguide_top_margin"
+            tools:alpha="1"
+            tools:listitem="@layout/programguide_item_time" />
+
+
+
+        <include
+            android:id="@+id/programguide_current_date"
+            layout="@layout/programguide_item_day"
+            android:layout_width="58dp"
+            android:layout_height="@dimen/programguide_time_row_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/programguide_time_row" />
+
+        <include
+            android:id="@+id/programguide_current_time_indicator"
+            layout="@layout/programguide_item_time_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="122dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/programguide_time_row"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/programguide_focus_catcher"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="#FFFFFF4C"
+            app:layout_constraintBottom_toBottomOf="@+id/programguide_current_date"
+            app:layout_constraintEnd_toEndOf="@+id/programguide_current_date" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

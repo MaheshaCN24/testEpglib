@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/programguide_button_corner_radius" />
+            <stroke android:width="2px" android:color="#FFFFFFDD"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/programguide_button_corner_radius" />
+            <solid android:color="#191919" />
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020, Egeniq
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/programguide_program_row_height"
+    android:layout_margin="@dimen/picker_item_spacing"
+    android:background="@drawable/programguide_item_program_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:layout_margin="20dp"
+    tools:parentTag="android.widget.FrameLayout">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12px"
+            android:layout_marginLeft="16px"
+            android:layout_marginRight="16px"
+            android:gravity="start|center_vertical"
+            android:textSize="17px"
+            tools:text="Item title"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/item_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/ProgramGuide.Text.Program.Info"
+            android:gravity="start|center_vertical"
+            android:text="U | 2019 | Hindi | Drama | Fantasy | Fiction"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/ProgramGuide.Text.Program.Info"
+            android:gravity="start|center_vertical"
+            android:text="01:00 - 11:00"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+
+
+</merge>
